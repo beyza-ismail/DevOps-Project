@@ -47,4 +47,3 @@ jobs:
             org.opencontainers.image.version=${{ github.sha }}
           tags: |
             beyza201511/devops-project:latest
-            beyza201511/devops-project:${{ github.sha }}
