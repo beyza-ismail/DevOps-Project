@@ -44,10 +44,17 @@ jobs:
           tags: |
             beyza201511/devops-project:latest
 
+      - name: Install Docker Compose V2
+        run: |
+          mkdir -p ~/.docker/cli-plugins/
+          curl -SL https://github.com/docker/compose/releases/download/v2.14.0/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+          chmod +x ~/.docker/cli-plugins/docker-compose
+
       - name: Deploy with Docker Compose
         run: |
           docker compose pull
           docker compose up -d
+          docker ps -a
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
