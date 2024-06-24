@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:11
 WORKDIR /app
 COPY target/technical_prototype-0.0.1-SNAPSHOT.jar /app/app.jar
 EXPOSE 8080
