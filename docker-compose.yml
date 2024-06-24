@@ -13,13 +13,15 @@ services:
       - mongodb_data:/data/db
 
   springboot-app:
+    image: beyza201511/devops-project:latest
     build:
       context: .
-      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     environment:
       SPRING_DATA_MONGODB_URI: mongodb+srv://admin:test@cluster0.bz4besm.mongodb.net/AmazeStay?retryWrites=true&w=majority
+    depends_on:
+      - mongodb
 
 volumes:
   mongodb_data:
