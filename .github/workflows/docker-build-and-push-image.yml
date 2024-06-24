@@ -53,7 +53,7 @@ jobs:
       - name: Deploy with Docker Compose
         run: |
           docker compose pull
-          docker compose up -d
+          docker compose up
           docker ps -a
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
