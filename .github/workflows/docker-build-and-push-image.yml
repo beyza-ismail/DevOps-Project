@@ -45,9 +45,9 @@ jobs:
             beyza201511/devops-project:latest
 
       - name: Deploy with Docker Compose
-          run: |
-            docker compose pull
-            docker compose up -d
-          env:
-            DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-            DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+        run: |
+          docker compose pull
+          docker compose up -d
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
