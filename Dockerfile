@@ -1,5 +1,11 @@
-FROM openjdk:11
+FROM maven:3.8.2-jdk-11
+
 WORKDIR /app
-COPY target/technical_prototype-0.0.1-SNAPSHOT.jar /app/app.jar
+
+COPY . .
+
+RUN mvn clean package
+
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
+
+CMD ["java", "-jar", "target/technical_prototype-0.0.1-SNAPSHOT.jar"]
