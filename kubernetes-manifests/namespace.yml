@@ -1,0 +1,8 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: devops
+  labels:
+    name: devops
+  annotations:
+    description: "Namespace created for the DevOps project"
