@@ -115,7 +115,6 @@ metadata:
     traefik.ingress.kubernetes.io/redirect-entry-point: websecure
     traefik.ingress.kubernetes.io/redirect-permanent: "true"
     traefik.ingress.kubernetes.io/preserve-host-header: "true"
-    traefik.ingress.kubernetes.io/router.middlewares: devops-strip-prefix@kubernetescrd
 spec:
   rules:
     - http:
